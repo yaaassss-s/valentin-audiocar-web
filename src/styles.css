@@ -45,6 +45,7 @@ a {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -785,6 +786,7 @@ label {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -803,6 +805,7 @@ textarea {
 }
 
 input:focus,
+select:focus,
 textarea:focus {
   border-color: rgba(40, 215, 255, 0.55);
   box-shadow: 0 0 0 4px rgba(40, 215, 255, 0.1);
@@ -1757,6 +1760,7 @@ h3,
 }
 
 input,
+select,
 textarea {
   border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
@@ -1766,9 +1770,28 @@ textarea {
 }
 
 input:focus,
+select:focus,
 textarea:focus {
   border-color: rgba(226, 27, 45, 0.82);
   box-shadow: 0 0 0 4px rgba(226, 27, 45, 0.15);
+}
+
+select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 8px);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 14px) 50%,
+    0 0;
+  background-size:
+    6px 6px,
+    6px 6px,
+    auto;
+  background-repeat: no-repeat;
+  padding-right: 2.7rem;
 }
 
 .map-frame {
@@ -1932,5 +1955,507 @@ textarea:focus {
   .local-gate {
     right: 4%;
     width: 32%;
+  }
+}
+
+/* Ajustes finales de legibilidad y galería local de trabajos. */
+body {
+  line-height: 1.5;
+}
+
+.hero-content h1,
+.page-hero h1 {
+  font-size: clamp(2.85rem, 7vw, 5.15rem);
+  line-height: 0.96;
+  text-shadow:
+    3px 3px 0 #030303,
+    6px 6px 0 rgba(226, 27, 45, 0.56);
+}
+
+.hero-copy,
+.page-hero p,
+.brand-note,
+.local-copy p,
+.final-cta p,
+.service-card p,
+.service-card strong,
+.trust-item p,
+.location-card p,
+.contact-info span,
+.site-footer p,
+.work-body p,
+.empty-state p {
+  color: #f0ebe4;
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.hero-copy,
+.page-hero p {
+  font-size: clamp(1.06rem, 1.8vw, 1.22rem);
+}
+
+.brand-note {
+  max-width: 700px;
+}
+
+.section-heading h2,
+.final-cta h2,
+.local-copy h2 {
+  line-height: 1.02;
+}
+
+.service-card,
+.trust-item,
+.contact-info,
+.contact-form,
+.location-card {
+  padding: 1.35rem;
+}
+
+.service-card {
+  gap: 1.05rem;
+  min-height: 330px;
+}
+
+.service-card h2,
+.trust-item h3,
+.work-body h2 {
+  line-height: 1.05;
+}
+
+.btn,
+.main-nav a,
+.nav-whatsapp,
+.filter-button {
+  line-height: 1.15;
+  text-align: center;
+  white-space: normal;
+}
+
+select option {
+  background: #101010;
+  color: #fff;
+}
+
+.work-toolbar {
+  margin-bottom: 1.35rem;
+}
+
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.filter-button {
+  min-height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 8px),
+    #101010;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 950;
+  padding: 0.65rem 0.9rem;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible,
+.filter-button.active {
+  border-color: rgba(226, 27, 45, 0.9);
+  background: linear-gradient(135deg, var(--red-bright), var(--red-deep));
+  box-shadow: 4px 4px 0 #050505;
+  transform: translateY(-1px);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.work-card {
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 38%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 9px),
+    #121212;
+  box-shadow:
+    5px 5px 0 #050505,
+    0 18px 48px rgba(0, 0, 0, 0.38);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.work-card:hover {
+  border-color: rgba(226, 27, 45, 0.74);
+  box-shadow:
+    7px 7px 0 #050505,
+    0 0 30px rgba(226, 27, 45, 0.18);
+  transform: translateY(-4px);
+}
+
+.work-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  min-height: 220px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 58%, #f4f4f4 0 5%, #d71928 6% 12%, #1a1a1a 13% 24%, transparent 25%),
+    linear-gradient(135deg, rgba(226, 27, 45, 0.48), transparent 42%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 14px),
+    #171717;
+}
+
+.work-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  place-items: end start;
+  padding: 1rem;
+}
+
+.work-placeholder span,
+.work-badge {
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  background: #080808;
+  box-shadow: 3px 3px 0 #000;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 950;
+  padding: 0.48rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.work-badge {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-color: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(135deg, var(--red-bright), var(--red-deep));
+}
+
+.work-body {
+  padding: 1.15rem;
+}
+
+.work-category {
+  margin-bottom: 0.35rem;
+  color: var(--red-bright);
+  font-size: 0.82rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.work-body h2 {
+  margin-bottom: 0.45rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-style: italic;
+  text-shadow: 2px 2px 0 #050505;
+  text-transform: uppercase;
+}
+
+.work-meta {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+}
+
+.work-meta div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+  padding-top: 0.55rem;
+}
+
+.work-meta dt,
+.work-meta dd {
+  margin: 0;
+}
+
+.work-meta dt {
+  color: #fff;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.work-meta dd {
+  color: #f0ebe4;
+  font-weight: 800;
+}
+
+.empty-state {
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-left: 8px solid var(--red);
+  border-radius: 4px;
+  background:
+    linear-gradient(120deg, rgba(226, 27, 45, 0.22), transparent 48%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 9px),
+    #121212;
+  box-shadow:
+    5px 5px 0 #050505,
+    0 18px 48px rgba(0, 0, 0, 0.3);
+  padding: clamp(1.15rem, 4vw, 1.6rem);
+}
+
+.empty-state h2,
+.empty-state h3 {
+  margin-bottom: 0.6rem;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.05;
+  text-shadow: 2px 2px 0 #050505;
+  text-transform: uppercase;
+}
+
+.compact-empty {
+  max-width: 780px;
+}
+
+@media (max-width: 1020px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-content h1,
+  .page-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+    line-height: 1;
+  }
+
+  .service-card,
+  .trust-item,
+  .contact-info,
+  .contact-form,
+  .location-card {
+    padding: 1.1rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero-content h1,
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .work-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .work-media,
+  .work-placeholder {
+    min-height: 190px;
+  }
+}
+
+/* Legibilidad: la fuente deportiva queda para impacto visual; el contenido vuelve a una lectura limpia. */
+:root {
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: Impact, Haettenschweiler, "Arial Black", sans-serif;
+}
+
+body,
+p,
+a,
+button,
+input,
+select,
+textarea,
+label,
+small,
+dd,
+dt,
+.btn,
+.main-nav a,
+.nav-whatsapp,
+.service-card,
+.trust-item,
+.work-card,
+.contact-info,
+.contact-form,
+.location-card,
+.site-footer,
+.mini-link,
+.filter-button,
+.eyebrow {
+  font-family: var(--font-body);
+}
+
+.hero-content h1,
+.page-hero h1,
+.section-heading h2,
+.final-cta h2,
+.local-copy h2,
+.shop-sign span,
+.shop-sign strong,
+.local-awning,
+.brand strong,
+.footer-brand {
+  font-family: var(--font-display);
+}
+
+.section-heading h2,
+.final-cta h2,
+.local-copy h2 {
+  text-shadow: 2px 2px 0 #050505;
+  transform: none;
+}
+
+.hero-content h1,
+.page-hero h1 {
+  text-shadow:
+    3px 3px 0 #030303,
+    5px 5px 0 rgba(226, 27, 45, 0.52);
+  transform: skewX(-2deg);
+}
+
+.service-card h2,
+.trust-item h3,
+.work-body h2,
+.empty-state h2,
+.empty-state h3,
+.site-footer h2,
+.contact-info strong,
+.location-card h2 {
+  font-family: var(--font-body);
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.18;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.service-card h2 {
+  font-size: 1.28rem;
+  font-weight: 900;
+}
+
+.service-card p,
+.service-card strong,
+.trust-item p,
+.work-body p,
+.empty-state p,
+.local-copy p,
+.final-cta p,
+.brand-note {
+  color: #f4efe8;
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 650;
+  line-height: 1.78;
+}
+
+.service-card strong {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.btn,
+.main-nav a,
+.nav-whatsapp,
+.filter-button,
+.mini-link,
+.work-category,
+.work-meta dt,
+.work-placeholder span,
+.work-badge,
+.gallery-placeholder span,
+.category-row span {
+  font-family: var(--font-body);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.btn,
+.nav-whatsapp,
+.mini-link {
+  font-weight: 850;
+}
+
+.filter-button {
+  font-weight: 850;
+}
+
+.eyebrow {
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+label {
+  font-weight: 800;
+}
+
+input,
+select,
+textarea {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 780px) {
+  .hero-content h1,
+  .page-hero h1 {
+    text-shadow:
+      2px 2px 0 #030303,
+      4px 4px 0 rgba(226, 27, 45, 0.48);
+    transform: none;
+  }
+
+  .section-heading h2,
+  .final-cta h2,
+  .local-copy h2 {
+    text-shadow: 2px 2px 0 #050505;
+  }
+
+  .service-card p,
+  .service-card strong,
+  .trust-item p,
+  .work-body p,
+  .empty-state p {
+    font-size: 1rem;
   }
 }

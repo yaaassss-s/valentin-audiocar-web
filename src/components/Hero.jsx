@@ -6,13 +6,13 @@ export default function Hero() {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
       <div className="hero-content">
-        <p className="eyebrow">Audio car en Wilde</p>
-        <h1 id="hero-title">Sonido, potencia y estilo para tu auto</h1>
+        <p className="eyebrow">Centro integral automotor en Wilde</p>
+        <h1 id="hero-title">Todo para tu auto en un solo lugar</h1>
         <p className="hero-copy">
-          Venta e instalación de audio, pantallas, potencias, subwoofers y accesorios en Wilde.
+          Audio car, baterías, polarizados, alarmas, mecánica, electricidad, scaneo y chapa y pintura en Wilde.
         </p>
         <p className="brand-note">
-          Instalaciones prolijas, asesoramiento personalizado y equipos para cada tipo de vehículo.
+          Servicio integral automotor con atención personalizada, trabajos prolijos y soluciones para cada vehículo.
         </p>
         <div className="hero-actions">
           <WhatsAppButton />
@@ -23,8 +23,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-visual" aria-label="Estética automotor con sistema de audio">
-        {/* Reemplazar este bloque por una foto real del local, del taller o de una instalación destacada. */}
+      <div className="hero-visual" aria-label="Estética automotor de taller integral">
+        {/* Reemplazar este bloque por una foto real del local, del taller o de trabajos destacados. */}
         <div className="shop-sign">
           <span>Valentín</span>
           <strong>Audiocar</strong>
@@ -46,7 +46,7 @@ export default function Hero() {
         </div>
         <div className="hero-stat">
           <Gauge size={18} />
-          <span>Taller especializado en audio vehicular</span>
+          <span>Sonido, potencia y soluciones para tu auto</span>
         </div>
       </div>
     </section>

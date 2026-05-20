@@ -9,11 +9,11 @@ export default function Contact() {
     <main id="main-content">
       <SEO
         title="Contacto | Valentín Audiocar"
-        description="Contactá a Valentín Audiocar por WhatsApp o Instagram para consultar por instalaciones de audio para vehículos en Wilde."
+        description="Contactá a Valentín Audiocar por WhatsApp o Instagram para consultar por audio car, baterías, polarizados, alarmas, mecánica automotor, electricidad automotor, scaneo y chapa y pintura en Wilde."
       />
       <section className="page-hero slim">
         <p className="eyebrow">Contacto</p>
-        <h1>Consultá por tu instalación</h1>
+        <h1>Consultá por el servicio que necesitás</h1>
         <p>Completá los datos y se abre WhatsApp con el mensaje listo para enviar.</p>
       </section>
 

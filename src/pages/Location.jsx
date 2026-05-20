@@ -10,7 +10,7 @@ export default function Location() {
     <main id="main-content">
       <SEO
         title="Ubicación | Valentín Audiocar en Wilde"
-        description="Valentín Audiocar está en Salcedo 262, Wilde, Provincia de Buenos Aires. Consultá antes de venir para coordinar disponibilidad."
+        description="Valentín Audiocar está en Salcedo 262, Wilde. Centro integral automotor con audio car, baterías, polarizados, alarmas, mecánica, electricidad automotor, scaneo y chapa y pintura."
       />
       <section className="page-hero slim">
         <p className="eyebrow">Ubicación</p>
@@ -22,7 +22,7 @@ export default function Location() {
         <article className="location-card">
           <MapPin size={32} />
           <h2>{business.address}</h2>
-          <p>Venta e instalación de audio para vehículos con atención personalizada.</p>
+          <p>Centro integral automotor con atención personalizada y soluciones para tu vehículo.</p>
           <div className="location-actions">
             <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
               <Navigation size={18} />

@@ -7,11 +7,11 @@ export default function LocalSection() {
     <section className="section local-section" aria-labelledby="local-title">
       <div className="local-copy">
         <p className="eyebrow">Nuestro local</p>
-        <h2 id="local-title">Un taller real de audio car en Wilde</h2>
+        <h2 id="local-title">Un taller real para resolver tu auto en Wilde</h2>
         <p>
           La estética de Valentín Audiocar nace de la fachada gris, el logo rojo y negro, la vidriera con
-          parlantes y pantallas, y el portón con gráfica automotor. La web sigue esa misma línea: directa,
-          potente y profesional.
+          equipamiento automotor y el portón con gráfica de taller. La web sigue esa misma línea: directa,
+          potente y profesional, ahora mostrando todos los servicios para tu vehículo.
         </p>
         <div className="local-pills" aria-label="Datos rápidos del local">
           <span>
@@ -37,7 +37,7 @@ export default function LocalSection() {
             <strong>1126155050</strong>
           </div>
           <div className="local-gate">
-            <span>Servicio integral audio car</span>
+            <span>Centro integral automotor</span>
           </div>
         </div>
       </div>

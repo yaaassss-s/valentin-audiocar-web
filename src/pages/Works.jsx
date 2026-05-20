@@ -1,42 +1,68 @@
-import GalleryCard from "../components/GalleryCard.jsx";
+import { useMemo, useState } from "react";
+import WorkCard from "../components/WorkCard.jsx";
+import WorkFilters from "../components/WorkFilters.jsx";
 import SEO from "../components/SEO.jsx";
 import WhatsAppButton from "../components/WhatsAppButton.jsx";
-import { galleryItems } from "../data/gallery.js";
+import { trabajos, workFilters } from "../data/trabajos.js";
 
-const categories = ["Audio completo", "Subwoofers", "Pantallas", "Potencias", "Instalaciones prolijas", "Accesorios"];
+function sortByOrder(a, b) {
+  return (a.orden ?? 999) - (b.orden ?? 999);
+}
 
 export default function Works() {
+  const [activeFilter, setActiveFilter] = useState("Todos");
+
+  const publishedWorks = useMemo(() => trabajos.filter((trabajo) => trabajo.publicado).sort(sortByOrder), []);
+  const filteredWorks = useMemo(
+    () =>
+      activeFilter === "Todos"
+        ? publishedWorks
+        : publishedWorks.filter((trabajo) => trabajo.categoria === activeFilter),
+    [activeFilter, publishedWorks],
+  );
+
   return (
     <main id="main-content">
       <SEO
         title="Trabajos | Valentín Audiocar"
-        description="Galería de trabajos realizados de audio para autos, subwoofers, pantallas, potencias e instalaciones prolijas."
+        description="Trabajos realizados por Valentín Audiocar, centro integral automotor en Wilde: audio car, polarizados, alarmas, mecánica, electricidad, chapa y pintura, scaneo y baterías."
       />
       <section className="page-hero">
         <p className="eyebrow">Trabajos</p>
-        <h1>Trabajos de audio con terminación prolija</h1>
-        <p>Una muestra de estilos de instalación para audio, pantallas, subwoofers, potencias y accesorios.</p>
+        <h1>Trabajos automotores con terminación prolija</h1>
+        <p>Una muestra visual de servicios de audio, polarizados, alarmas, mecánica, electricidad, chapa y pintura y scaneo.</p>
       </section>
 
       <section className="section page-section">
-        <div className="category-row" aria-label="Categorías de trabajos">
-          {categories.map((category) => (
-            <span key={category}>{category}</span>
-          ))}
+        <div className="work-toolbar">
+          <WorkFilters filters={workFilters} activeFilter={activeFilter} onChange={setActiveFilter} />
         </div>
-        <div className="gallery-grid">
-          {galleryItems.map((item) => (
-            <GalleryCard key={item.title} item={item} />
-          ))}
-        </div>
+
+        {publishedWorks.length === 0 ? (
+          <div className="empty-state">
+            <h2>Próximamente vamos a estar subiendo trabajos realizados.</h2>
+            <p>Estamos preparando una galería con trabajos reales del local.</p>
+          </div>
+        ) : filteredWorks.length === 0 ? (
+          <div className="empty-state">
+            <h2>Todavía no hay trabajos publicados en esta categoría.</h2>
+            <p>Probá con otro filtro o volvé a ver todos los trabajos.</p>
+          </div>
+        ) : (
+          <div className="work-grid">
+            {filteredWorks.map((trabajo) => (
+              <WorkCard key={trabajo.id} trabajo={trabajo} />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="final-cta compact-cta">
         <div>
-          <h2>¿Querés armar algo parecido en tu auto?</h2>
-          <p>Mandanos tu modelo y qué sonido buscás. Te orientamos por WhatsApp.</p>
+          <h2>¿Querés resolver algo en tu auto?</h2>
+          <p>Mandanos tu modelo y el servicio que necesitás. Te orientamos por WhatsApp.</p>
         </div>
-        <WhatsAppButton message="Hola Valentín Audiocar, vi la galería de trabajos y quería consultar por mi auto." />
+        <WhatsAppButton message="Hola Valentín Audiocar, vi los trabajos realizados y quería consultar por mi auto." />
       </section>
     </main>
   );

@@ -7,11 +7,11 @@ export default function Services() {
     <main id="main-content">
       <SEO
         title="Servicios | Valentín Audiocar"
-        description="Instalación de audio, parlantes, subwoofers, potencias, pantallas y accesorios para vehículos en Wilde."
+        description="Servicios de Valentín Audiocar, centro integral automotor en Wilde: audio car, baterías, polarizados, alarmas, mecánica automotor, electricidad automotor, scaneo y chapa y pintura."
       />
       <section className="page-hero slim">
         <p className="eyebrow">Servicios</p>
-        <h1>Audio, multimedia y accesorios para tu vehículo</h1>
+        <h1>Centro integral automotor para tu vehículo</h1>
         <p>Elegí el servicio que necesitás y consultá por WhatsApp con un mensaje directo para ese trabajo.</p>
       </section>
 

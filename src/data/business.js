@@ -6,7 +6,7 @@ export const business = {
   instagram: "@valentin_audiocar",
   instagramUrl: "https://www.instagram.com/valentin_audiocar",
   defaultMessage:
-    "Hola Valentín Audiocar, quería consultar por una instalación de audio para mi auto.",
+    "Hola Valentín Audiocar, quería consultar por servicios automotores para mi auto.",
 };
 
 export function getWhatsAppUrl(message = business.defaultMessage) {

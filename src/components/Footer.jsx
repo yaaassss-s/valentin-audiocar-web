@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Valentín Audiocar</div>
-          <p>Venta e instalación de audio, pantallas, potencias, subwoofers y accesorios para vehículos.</p>
+          <p>Centro integral automotor en Wilde: audio car, baterías, polarizados, alarmas, mecánica, electricidad, scaneo y chapa y pintura.</p>
         </div>
         <div>
           <h2>Links rápidos</h2>

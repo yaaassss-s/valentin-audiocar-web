@@ -33,7 +33,7 @@ export default function Header() {
         <span className="brand-mark">VA</span>
         <span>
           <strong>Valentín Audiocar</strong>
-          <small>Audio para vehículos</small>
+          <small>Centro integral automotor</small>
         </span>
       </Link>
 
