@@ -26,21 +26,13 @@ export default function LocalSection() {
         <WhatsAppButton message="Hola Valentín Audiocar, quería consultar antes de pasar por el local." />
       </div>
 
-      <div className="local-photo-card" aria-label="Referencia visual del local Valentín Audiocar">
-        {/* Si querés usar la foto real en producción, guardala en public/local-valentin-audiocar.jpg y reemplazá este bloque por una imagen. */}
-        <div className="local-facade">
-          <div className="local-awning">Valentín <span>Audiocar</span></div>
-          <div className="local-window">
-            <div className="display-speaker big" />
-            <div className="display-speaker small" />
-            <div className="display-screen" />
-            <strong>1126155050</strong>
-          </div>
-          <div className="local-gate">
-            <span>Centro integral automotor</span>
-          </div>
-        </div>
-      </div>
+      <figure className="local-photo-card">
+        <img
+          className="local-photo"
+          src="/images/local-valentin-audiocar.jpg"
+          alt="Frente del local Valentín Audiocar en Wilde"
+        />
+      </figure>
     </section>
   );
 }

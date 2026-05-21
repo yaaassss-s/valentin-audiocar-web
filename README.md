@@ -28,6 +28,7 @@ La web está pensada para desplegarse en Vercel y mantenerse desde el repositori
 - `src/components`: componentes reutilizables como `Header`, `Footer`, `Hero`, `ServiceCard`, `WhatsAppButton`, `ContactForm`, `WorkCard` y `WorkFilters`.
 - `src/pages`: páginas principales de la web: inicio, servicios, trabajos, ubicación, contacto y 404.
 - `src/data`: datos editables del sitio, como negocio, navegación, servicios y trabajos realizados.
+- `public/images`: imágenes fijas de la marca y del local usadas en header, hero, footer y ubicación.
 - `public/trabajos`: carpeta donde se guardan las imágenes reales de trabajos realizados.
 - `dist`: carpeta generada por el build. No se edita a mano.
 
@@ -234,7 +235,28 @@ src/pages/
 
 ## Cómo Cambiar Imágenes Generales
 
-La web tiene placeholders visuales hechos con CSS para mantener la estética taller/audiocar.
+La web usa imágenes reales del local y mantiene algunos recursos visuales hechos con CSS para sostener la estética taller/audiocar.
+
+Imágenes actuales:
+
+- Logo: `public/images/logo-general.png`
+- Favicon/icono: `public/images/logo_icon.png`
+- Foto del local: `public/images/local-valentin-audiocar.jpg`
+
+El logo se muestra en el header, el hero principal y el footer. La foto del local se muestra en la sección del local y en la página de ubicación.
+
+Para reemplazarlas en el futuro, conviene subir los nuevos archivos manteniendo esos mismos nombres. Así no hace falta tocar código.
+
+Si se cambian los nombres de archivo, actualizar también las rutas en:
+
+- `src/components/Header.jsx`
+- `src/components/Hero.jsx`
+- `src/components/Footer.jsx`
+- `src/components/LocalSection.jsx`
+- `src/pages/Location.jsx`
+- `index.html` para el favicon/icono
+
+Usar imágenes optimizadas antes de subirlas. Para el logo conviene PNG con fondo transparente o buen contraste sobre negro. Para la foto del local conviene JPG horizontal, idealmente cerca de 16:9, para que no se recorte de forma incómoda en mobile.
 
 Para usar imágenes reales:
 

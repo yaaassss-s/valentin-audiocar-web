@@ -8,7 +8,13 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <div className="footer-brand">Valentín Audiocar</div>
+          <Link className="footer-logo-link" to="/" aria-label="Ir al inicio">
+            <img
+              className="footer-logo"
+              src="/images/logo-general.png"
+              alt="Logo Valentín Audiocar"
+            />
+          </Link>
           <p>Centro integral automotor en Wilde: audio car, baterías, polarizados, alarmas, mecánica, electricidad, scaneo y chapa y pintura.</p>
         </div>
         <div>

@@ -26,8 +26,7 @@ export default function Hero() {
       <div className="hero-visual" aria-label="Estética automotor de taller integral">
         {/* Reemplazar este bloque por una foto real del local, del taller o de trabajos destacados. */}
         <div className="shop-sign">
-          <span>Valentín</span>
-          <strong>Audiocar</strong>
+          <img src="/images/logo-general.png" alt="Logo Valentín Audiocar" />
         </div>
         <div className="garage-door" />
         <div className="car-silhouette">

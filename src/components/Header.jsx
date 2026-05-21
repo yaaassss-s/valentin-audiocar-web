@@ -30,9 +30,14 @@ export default function Header() {
   return (
     <header className="site-header">
       <Link className="brand" to="/" onClick={closeMenu} aria-label="Ir al inicio">
-        <span className="brand-mark">VA</span>
-        <span>
-          <strong>Valentín Audiocar</strong>
+        <span className="brand-logo-shell">
+          <img
+            className="brand-logo"
+            src="/images/logo-general.png"
+            alt="Logo Valentín Audiocar"
+          />
+        </span>
+        <span className="brand-copy">
           <small>Centro integral automotor</small>
         </span>
       </Link>

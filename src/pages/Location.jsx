@@ -19,18 +19,30 @@ export default function Location() {
       </section>
 
       <section className="section location-layout">
-        <article className="location-card">
-          <MapPin size={32} />
-          <h2>{business.address}</h2>
-          <p>Centro integral automotor con atención personalizada y soluciones para tu vehículo.</p>
-          <div className="location-actions">
-            <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
-              <Navigation size={18} />
-              Cómo llegar
-            </a>
-            <WhatsAppButton />
-          </div>
-        </article>
+        <div className="location-info-stack">
+          <article className="location-card">
+            <MapPin size={32} />
+            <h2>Encontranos en Wilde</h2>
+            <p>Estamos en Salcedo 262, Wilde. Al llegar vas a reconocer el local por la cartelería de Valentín Audiocar.</p>
+            <p className="location-address">
+              <strong>Dirección</strong>
+              <span>{business.address}</span>
+            </p>
+            <div className="location-actions">
+              <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
+                <Navigation size={18} />
+                Cómo llegar
+              </a>
+              <WhatsAppButton />
+            </div>
+          </article>
+          <figure className="location-photo-card">
+            <img
+              src="/images/local-valentin-audiocar.jpg"
+              alt="Frente del local Valentín Audiocar en Wilde"
+            />
+          </figure>
+        </div>
         <div className="map-frame">
           {/* Reemplazar este iframe si se quiere usar un mapa definitivo desde Google Maps Embed. */}
           <iframe
