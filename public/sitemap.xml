@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://valentin-audiocar-web.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://valentin-audiocar-web.vercel.app/servicios</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valentin-audiocar-web.vercel.app/trabajos</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valentin-audiocar-web.vercel.app/ubicacion</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valentin-audiocar-web.vercel.app/contacto</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
